@@ -14,6 +14,7 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, image, tags, github, demo, index }: ProjectCardProps) {
   const colors = ["var(--pixel-pink)", "var(--pixel-blue)", "var(--pixel-purple)", "var(--pixel-cyan)"];
   const accentColor = colors[index % colors.length];
+  const hasLivePreview = Boolean(demo);
 
   return (
     <motion.div
@@ -33,11 +34,27 @@ export function ProjectCard({ title, description, image, tags, github, demo, ind
         }}
       />
 
-      <div className="aspect-video overflow-hidden bg-[var(--muted)]">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+      <div className="aspect-video overflow-hidden bg-[var(--muted)] relative">
+        {hasLivePreview ? (
+          <div className="absolute inset-0 origin-top-left w-[200%] h-[200%] scale-50 bg-[var(--background)]">
+            <iframe
+              src={demo}
+              title={`${title} website preview`}
+              loading="lazy"
+              className="w-full h-full border-0 pointer-events-none"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            />
+          </div>
+        ) : (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        )}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"
+          style={{ background: `linear-gradient(180deg, transparent 45%, ${accentColor}18)` }}
         />
       </div>
 
