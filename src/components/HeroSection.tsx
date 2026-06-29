@@ -67,12 +67,12 @@ export function HeroSection() {
           transition={{ delay: 0.4 }}
           className="flex items-center justify-center gap-4 mb-12"
         >
-          <button className="px-8 py-4 bg-[var(--pixel-pink)] hover:bg-[var(--pixel-pink)]/80 text-[var(--background)] font-['Press_Start_2P'] rounded-xl shadow-lg shadow-[var(--pixel-pink)]/30 hover:shadow-[var(--pixel-pink)]/50 transition-all hover:-translate-y-1" style={{ fontSize: '10px' }}>
+          <a href="#skills" className="px-8 py-4 bg-[var(--pixel-pink)] hover:bg-[var(--pixel-pink)]/80 text-[var(--background)] font-['Press_Start_2P'] rounded-xl shadow-lg shadow-[var(--pixel-pink)]/30 hover:shadow-[var(--pixel-pink)]/50 transition-all hover:-translate-y-1" style={{ fontSize: '10px' }}>
             START GAME
-          </button>
-          <button className="px-8 py-4 bg-transparent border-2 border-[var(--pixel-blue)] text-[var(--pixel-blue)] hover:bg-[var(--pixel-blue)]/10 font-['Press_Start_2P'] rounded-xl transition-all hover:-translate-y-1" style={{ fontSize: '10px' }}>
+          </a>
+          <a href="#projects" className="px-8 py-4 bg-transparent border-2 border-[var(--pixel-blue)] text-[var(--pixel-blue)] hover:bg-[var(--pixel-blue)]/10 font-['Press_Start_2P'] rounded-xl transition-all hover:-translate-y-1" style={{ fontSize: '10px' }}>
             VIEW PROJECTS
-          </button>
+          </a>
         </motion.div>
 
         <motion.div
