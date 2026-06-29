@@ -1,6 +1,33 @@
 import { motion } from "motion/react";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
+const socialLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/codewarf",
+    icon: Github,
+    color: "var(--pixel-pink)",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/codewarf",
+    icon: Linkedin,
+    color: "var(--pixel-blue)",
+  },
+  {
+    label: "Twitter",
+    href: "https://x.com/codewarf",
+    icon: Twitter,
+    color: "var(--pixel-cyan)",
+  },
+  {
+    label: "Email",
+    href: "mailto:park1bum@gmail.com",
+    icon: Mail,
+    color: "var(--pixel-purple)",
+  },
+];
+
 export function HeroSection() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 py-20 relative">
@@ -54,15 +81,13 @@ export function HeroSection() {
           transition={{ delay: 0.6 }}
           className="flex items-center justify-center gap-6"
         >
-          {[
-            { icon: Github, color: "var(--pixel-pink)" },
-            { icon: Linkedin, color: "var(--pixel-blue)" },
-            { icon: Twitter, color: "var(--pixel-cyan)" },
-            { icon: Mail, color: "var(--pixel-purple)" },
-          ].map(({ icon: Icon, color }, idx) => (
+          {socialLinks.map(({ label, href, icon: Icon, color }) => (
             <motion.a
-              key={idx}
-              href="#"
+              key={label}
+              href={href}
+              aria-label={label}
+              target={href.startsWith("mailto:") ? undefined : "_blank"}
+              rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
               whileHover={{ scale: 1.2, y: -4 }}
               className="w-12 h-12 rounded-xl bg-[var(--card)] border border-[var(--border)] flex items-center justify-center hover:shadow-lg transition-shadow"
               style={{

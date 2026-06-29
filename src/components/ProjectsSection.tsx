@@ -35,6 +35,14 @@ export function ProjectsSection() {
       // github: "#",
       demo: "https://into-deep-sea.netlify.app/",
     },
+    {
+      title: "ii-Yeonhee",
+      description: "체험전시 결과지 웹앱",
+      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
+      tags: ["React", "Styled-component", "framer-motion","React-query"],
+      // github: "#",
+      demo: "https://iichapter2.netlify.app/",
+    },
   ];
 
   return (
