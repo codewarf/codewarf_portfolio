@@ -4,6 +4,22 @@ import { motion } from "motion/react";
 export function ProjectsSection() {
   const projects = [
     {
+      title: "국립중앙 과학관 AI 로드맵",
+      description: "AI를 활용한 설문조사 및 전시품 추천 경로 웹앱",
+      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      tags: ["coldFusion", "Node.js", "Typescript", "framer-motion"],
+      // github: "#",
+      demo: "https://exhibition-ai-roadmap.netlify.app/",
+    },
+    {
+      title: "표창원 범죄연구소 과학수사 체험앱",
+      description: "실제 범죄형장 기록으로 체험해보는 간단한 앱",
+      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      tags: ["React-native", "Node.js", "Typescript", "framer-motion"],
+      // github: "#",
+      demo: "https://pics-forensic.netlify.app/",
+    },
+    {
       title: "베네치아 게임",
       description: "한컴 소나기 타이핑게임류의 웹 타이핑 게임 6인대전",
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
