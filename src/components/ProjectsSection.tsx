@@ -9,7 +9,7 @@ export function ProjectsSection() {
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
       tags: ["coldFusion", "Node.js", "Typescript", "framer-motion"],
       // github: "#",
-      demo: "https:www.huliac.com",
+      demo: "https:huliac.com",
     },
     {
       title: "국립중앙 과학관 AI 로드맵",
