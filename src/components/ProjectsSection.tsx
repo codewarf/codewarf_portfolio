@@ -37,7 +37,7 @@ export function ProjectsSection() {
     },
     {
       title: "사운드브릿지",
-      description: "말소리 장애아동을 위한 발음훈련 연구프로그램 녹음 웹앱",
+      description: "말소리 장애아동을 위한 발음훈련 연구프로그램 녹음 웹앱 및 치료사평가도구 웹",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
       tags: ["coldFusion", "Tailwind", "framer-motion", "Typescript", "mySql"],
       // github: "#",
